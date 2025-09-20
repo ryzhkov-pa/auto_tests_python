@@ -14,11 +14,13 @@ def test_open (driver):
     product_page = ProductPage(driver)
     product_page.check_title_is('Битва покемонов')
 
-def test_autorization(driver):
+
+
+def test_authorization(driver):
     homepage = HomePage(driver)
     homepage.open()
     homepage.click_email()
-    homepage.click_imputpassword()
+    homepage.click_input_password()
     homepage.click_food()
     homepage.check_id_is('17672')
 

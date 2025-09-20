@@ -1,5 +1,3 @@
-import pytest
-
 import requests
 import pytest
 import os
@@ -7,7 +5,6 @@ import dotenv
 dotenv.load_dotenv()
 import json
 
-import response
 
 URL = os.getenv('URL')
 TOKEN = os.getenv('TOKEN')
@@ -18,9 +15,9 @@ TRAINER_ID = os.getenv('TRAINER_ID')
 
 
 
-def test_status_code():
-    hyi1, status = response.hyi()
-    assert hyi1['data'][0]['id'] == '17906'
-    print(status)
 
-test_status_code()
+
+def hyi():
+    response = requests.get(url=f'{URL}/trainers', params={'trainer_id': TRAINER_ID})
+    return json.loads(response.text), response.status_code
+

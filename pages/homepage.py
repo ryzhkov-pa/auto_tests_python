@@ -1,11 +1,12 @@
-
+import json
 import os
 import dotenv
 dotenv.load_dotenv()
 
-Login = os.getenv('Login')
+login = os.getenv('Login')
 password = os.getenv('password')
 host = os.getenv('host')
+
 
 
 from selenium.webdriver.common.by import By
@@ -27,13 +28,13 @@ class HomePage:
     def click_email(self):
         email = self.driver.find_element(By.CSS_SELECTOR, value='#k_email')
         email.click()
-        email.send_keys(Login)
+        email.send_keys(login)
 
 
-    def click_imputpassword(self):
-        imputpassword = self.driver.find_element(By.CSS_SELECTOR, value='#k_password')
-        imputpassword.click()
-        imputpassword.send_keys(password)
+    def click_input_password(self):
+        input_password = self.driver.find_element(By.CSS_SELECTOR, value='#k_password')
+        input_password.click()
+        input_password.send_keys(password)
 
     def click_food(self):
         food = self.driver.find_element(By.CSS_SELECTOR, value='#root > div > div > section > div.style_1_popup_white_in.style_1_popup_white_in_auth > form > button')
