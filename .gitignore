@@ -1,0 +1,55 @@
+# IDE and editor files
+.idea/
+*.iml
+profiles_settings.xml
+misc.xml
+modules.xml
+vcs.xml
+.venv/
+.idea/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.test
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# pytest cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Logs
+*.log
+logs/
+
+# Selenium and browser drivers
+webdriver/
+drivers/
+*.exe
+
+# Temporary files
+temp/
+tmp/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
